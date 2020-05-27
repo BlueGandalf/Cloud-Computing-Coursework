@@ -1,0 +1,5 @@
+gcloud dataproc jobs submit hadoop --cluster hadoop-cluster --region=europe-west2 --jar file:///usr/lib/hadoop-mapreduce/hadoop-streaming.jar --files=mapper2.py,r
+educer2.py -- -mapper mapper2.py -reducer reducer2.py -input gs://614743bucket1/2018.csv -output gs://614743bucket1/output-streaming-test12a -numReduceTasks 1
+
+gcloud dataproc jobs submit hadoop --cluster hadoop-cluster --region=europe-west2 --jar file:///usr/lib/hadoop-mapreduce/hadoop-streaming.jar --files=mapper.py,r
+educer2.py -- -mapper mapper.py -reducer reducer2.py -input gs://614743bucket1/2018.csv -output gs://614743bucket1/output-streaming-test12a -numReduceTasks 1
